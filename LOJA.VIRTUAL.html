@@ -1,0 +1,283 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lojavirtual - Todas as Categorias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2><i class="fas fa-store"></i> lojavirtual</h2>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#recomendacoes">Recomendações</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar produtos...">
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag" style="color: white; font-size: 1.5rem;"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>28 Categorias do Mercado Livre</h1>
+            <p>Melhores ofertas em TODAS as categorias</p>
+            <div class="hero-buttons">
+                <a href="#recomendacoes" class="cta-button"><i class="fas fa-star"></i> Recomendações</a>
+                <a href="#categorias" class="cta-button secondary"><i class="fas fa-th-large"></i> Todas Categorias</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="categorias"></section>
+
+    <!-- Recomendações -->
+    <section id="recomendacoes" class="produtos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🔥 Recomendações <span class="badge">Top Vendas</span></h2>
+                <a href="#categorias" class="back-btn"><i class="fas fa-arrow-left"></i> Categorias</a>
+            </div>
+            <div class="produtos-grid" data-categoria="recomendacoes"></div>
+        </div>
+    </section>
+
+    <!-- TODAS AS 28 CATEGORIAS -->
+    <section id="calçados" class="produtos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-shoe-prints"></i> Calçados, Roupas e Bolsas</h2>
+                <a href="#categorias" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="produtos-grid" data-categoria="calçados"></div>
+        </div>
+    </section>
+
+    <section id="casa" class="produtos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-home"></i> Casa, Móveis e Decoração</h2>
+                <a href="#categorias" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="produtos-grid" data-categoria="casa"></div>
+        </div>
+    </section>
+
+    <section id="veiculos" class="produtos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-car"></i> Acessórios para Veículos</h2>
+                <a href="#categorias" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="produtos-grid" data-categoria="veiculos"></div>
+        </div>
+    </section>
+
+    <section id="esportes" class="produtos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-dumbbell"></i> Esportes e Fitness</h2>
+                <a href="#categorias" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="produtos-grid" data-categoria="esportes"></div>
+        </div>
+    </section>
+
+    <section id="eletro" class="produtos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-blender"></i> Eletrodomésticos</h2>
+                <a href="#categorias" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="produtos-grid" data-categoria="eletro"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <p>&copy; 2024 lojavirtual. 13 Categorias | Links Afiliados Mercado Livre</p>
+        </div>
+    </footer>
+        <script>
+    // 🔥 13 CATEGORIAS DO MERCADO LIVRE - ADICIONE SEUS LINKS!
+const produtosPorCategoria = {
+    recomendacoes: [
+        { id: 1, nome: "Furadeira De Impacto 3/8 Pol 550w Profissional Cor Preto", preco: 94.90, categoria: "ferramentas", imagem: "🔧", link: "https://meli.la/1995NjB", descricao: " Top Venda" },
+        { id: 2, nome: "Camera Para Carro 70mai 4k+1080p 3'' Hdr Gps A800se-1 App", preco: 1.100, categoria: "camera", imagem: "📷", link: "https://meli.la/2aoRYLC", descricao: "+100" },
+        { id: 3, nome: "Kit 140 Figurinhas Do Álbum Copa Do Mundo 2026- 20 Envelopes", preco: 153, categoria: "livros", imagem: "📚", link: "https://meli.la/2onz2CA", descricao: "1º em Livros Físicos" }
+    ],
+
+    calçados: [
+        { id: 4, nome: "Calça Legging Academia Zero Transparência Poliamida Elite", preco: 47.99, imagem: "👟", link: "https://meli.la/2Z7SV3d", descricao: "Versátil e moderna, é ideal para diferentes modalidades, treino, musculação, corrida, pilates, yoga, e até no dia a dia" },
+        { id: 5, nome: "Tênis Esportivo Masculino Voa 2 Olympikus", preco: 180, imagem: "👟", link: "https://meli.la/27tRA9o", descricao: "Masculino Voa 2 Olympikus" },
+        { id: 6, nome: "Kit Tênis Esportivo Masculino Feminino Academia + Relógio", preco: 47.04, imagem: "👟", link: "https://meli.la/15HGkfn", descricao: "Caminhada, Corrida, Passeio, Training, academia, crossfit" },
+        { id: 7, nome: "Calça Jeans Wide Leg Feminina Cintura Alta Sem Lycra Stillge", preco: 49, imagem: "👜", link: "https://meli.la/32d3znz", descricao: "CALÇA WIDE LEG CINTURA ALTA - STILLGER JEANS" },
+        { id: 8, nome: "Kit 3 Meias New Balance Cano Longo 39 Ao 42 Unissex Conforto", preco: 46.37, imagem: "👕", link: "https://meli.la/2oEUNJj", descricao: "1º em Meias New Balance" }
+    ],
+
+    casa: [
+        { id: 9, nome: "Kit 10 Pote De Vidro Marmita Hermético 640ml Freezer Fitness Rishon", preco: 98.40, imagem: "🥫", link: "https://meli.la/1Hpec9J", descricao: "1º em Cozinha" },
+        { id: 10, nome: "Cadeira De Escritório Até 150kg Executiva Presidente Office", preco: 399, imagem: "💺", link: "https://meli.la/1WA8hXR", descricao: "Preto - Luxo Premium" },
+        { id: 11, nome: "Jogo De Panelas 8 Peças Teflon Antiaderente C Tampa De Vidro Cor Preto/bege", preco: 149.99, imagem: "🍳", link: "https://meli.la/1J9d6sN", descricao: "1º em Panelas e Frigideiras" },
+        { id: 12, nome: "Jogo Lençol Casal 3pç 400 Fios Hipercal Conforto Macio Cor Azul-marinho Desenho do tecido LisoJogo De Panelas 8 Peças Teflon Antiaderente C Tampa De Vidro Cor Preto/bege", preco: 21.90, imagem: "🛏️", link: "https://meli.la/2dmt2cy", descricao: "1º em Têxteis de Casa e Decoração" },
+    ],
+    
+
+    veiculos: [
+        { id: 13, nome: "Kit Reparo Pedal Catraca Embreagem Clio Megane Scenic Kangoo", preco: 57.95, imagem: "🚗", link: "https://meli.la/1EgZiFF", descricao: "Kit Reparo Pedal Catraca Embreagem Renault Kwid 1.0 12v" },
+        { id: 14, nome: "Adaptador Bluetooth Carro Universal Transmissor Gotwire? Carregador Automotivo", preco: 21.90, imagem: "📻", link: "https://meli.la/2erGtFq", descricao: "Full HDTransforme seu rádio antigo em um moderno rádio com Bluetooth e aproveite suas músicas favoritas! Wireless" },
+        { id: 15, nome: "Mangueira Respiro Motor Peugeot 206 207 307 Partner 1.6 16v", preco: 47.20, imagem: "⛽", link: "https://meli.la/1BuNUfN", descricao: "MOTORES: 1.6 16V" }
+    ],
+
+    esportes: [
+        { id: 16, nome: "Kit 2 Calças Jogger Tactel Com Elastano Impulse", preco: 69.81, imagem: "👖", link: "https://meli.la/23XRki9", descricao: "Kit 2 Calças Jogger Tactel com Elastano Impulse Active Wear. Calças masculinas leves e confortáveis, ideais para academia, corrida, caminhada, treino funcional, dia a dia e viagens.21 Marchas" },
+        { id: 16, nome: "Kit 2x Colágeno + Ácido Hialurônico Renova Be Verisol Hidrolisado Zero Lactose Vitaminas E C B6 Proteína Biotina Zinco", preco: 180.59, imagem: "🔥", link: "https://meli.la/2SCyEHt", descricao: "COMPOSTO POR 2 COLÁGENOS + 1 CREME FACIAL RESVERATROL + 1 CREME FACIAL RETINOL" },
+        { id: 17, nome: "Tênis Kappa Pulse Rx Unissex Corrida Conforto", preco: 168.05, imagem: "🏋️", link: "https://meli.la/1xMxGvH", descricao: "Ajustável" }
+    ],
+
+    eletro: [
+        { id: 18, nome: "Aspirador De Pó Vertical Wap Power Speed Max 1600w", preco: 299.90, imagem: "❄️", link: "https://meli.la/2KZoLKs", descricao: "A Tecnologia Cyclone compacta toda a sujeira aspirada, impedindo que a passagem de ar seja obstruída pelas partículas de pó, além de facilitar a manutenção do aspirador. 3 em 1, " },
+        { id: 19, nome: "Máquina De Cortar Cabelo E Barba Maquininha Acabamento E Aparador Profissional Sem Fio 4 Pentes Preto Bivolt Ghs", preco: 68.85, imagem: "💇", link: "https://meli.la/14MoMVh", descricao: "Máquina 2 em 1 GHS - Cortador de Cabelo e Aparador de Pelos do Nariz" },
+        { id: 20, nome: "Multiprocessador E Triturador De Alimentos Elétrico Picador de 2 Litros Inox 110v Moedor de Alimentos Cortador de Carne Cortador de Legumes Multifuncional Triturador De Comida Oficial Risma", preco: 90, imagem: "🧺", link: "https://meli.la/2jSd2Ud", descricao: "Quando se trata de fazer seus pratos favoritos, todas as suas necessidades serão facilmente cobertas com este multiprocessador" }
+    ],
+
+    celulares: [
+        { id: 21, nome: "iPhone 17 Pro Max 256GB - Laranja-cósmico - Distribuidor Autorizado", preco: 9998, imagem: "📱", link: "https://meli.la/2LqvzfP", descricao: "iPhone 17 Pro Max. O iPhone mais potente já produzido." },
+        { id: 22, nome: "Carregador Compativel Com iPhone 8 X Xr 11 12 13 14 Pro Max Turbo Fonte Tipo C Boyu Cell", preco: 28.61, imagem: "📱", link: "https://meli.la/1X5A4CH", descricao: "2º em Carregadores" },
+        { id: 23, nome: "Carregador Super Rápido 25w Para Samsung Galaxy S24 S23 S22 S21 S20 Fe Ultra Motorola M22 M31 M32 M62 M63 M64 Xiaomi Redmi Note 12 13 14 15 LG - Super Fast Cabo Blindado Tipo Usb C -Dtimp", preco: 38.70, imagem: "📱", link: "https://meli.la/345VpJG", descricao: "Carregador Super Rápido" },
+        { id: 24, nome: "Carregador Portátil 20000 Turbo 22.5w Power Bank Premium Universal Rápido Para Samsung iPhone Xiaomi Motorola Celular Smartwatch Tablet Davely Preto", preco: 59.70, imagem: "📱", link: "https://meli.la/2FqsHTZ", descricao: "Carregador Portátil 20000 Turbo" }
+    ],
+
+    informatica: [
+        { id: 24, nome: "Monitor Gamer LG UltraGear 24” 24GS60F-B IPS Full HD 180Hz 1ms (GtG) NVIDIA® G-SYNC® AMD FreeSync™ HDR10 sRGB 99% HDMI DisplayPort", preco: 655, imagem: "💻", link: "https://meli.la/2cV1TCa", descricao: "Monitor Gamer LG UltraGear 24” 24GS60F-B IPS Full HD 180Hz 1ms (GtG) NVIDIA® G-SYNC® AMD FreeSync™ HDR10 sRGB 99% HDMI DisplayPort" },
+        { id: 25, nome: "TP-Link Archer AX53 Roteador Wifi6 AX3000 Gigabit Banda Dupla", preco: 242, imagem: "💾", link: "https://meli.la/27FREiP", descricao: "2º em Roteadores" },
+        { id: 26, nome: "Mouse Gamer Redragon Cobra Rgb Preto Preto", preco: 144, imagem: "🖱️", link: "https://meli.la/24ZjyPg", descricao: "16.000 DPI" }
+    ],
+
+    ferramentas: [
+        { id: 27, nome: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools", preco: 200, imagem: "🔩", link: "https://meli.la/2gHdwGc", descricao: "Bivolt, opera com bateria recarregável de tecnologia lítio (Li-on), o que traz maior vida til ao produto e proporciona ter a ferramenta sempre a mão" },
+        { id: 28, nome: "Parafusadeira Furadeira De Impacto The Black Tools Profissional TB-21PX 2 Baterias Com Maleta 60Hz Amarelo", preco: 170.90, imagem: "🔩", link: "https://meli.la/2adMXWZ", descricao: "FURADEIRA PARAFUSADEIRA DE IMPACTO SEM FIO A BATERIA 21V 3/8 10MM COM MALETA E ACESSÓRIOS TB-21PX - The Black Tools" },
+        { id: 29, nome: "Kit Chaves Ferramentas Jogo Fenda Philips Catraca Soquete Allen 46 Peças com Maleta Completa Manual Ideal Mecânico Manutenção Casa Carro Profissional Resistente Portátil Compacto Quicko", preco: 27, imagem: "🔩", link: "https://meli.la/14efsd2", descricao: "Jogo De Ferramentas Quicko Multiuso Chave De Fenda Soquetes 46 Peças " }
+    ],
+
+    
+    brinquedos: [
+        { id: 33, nome: "Álbum Copa Do Mundo 2026 Capa Normal Panini Oficial Fifa", preco: 40, imagem: "⚽", link: "https://meli.la/1pyS2X7", descricao: "Copa Do Mundo 2026 - Álbum Capa Normal - Fifa World Cup" },
+        { id: 34, nome: "Copa Do Mundo Fifa 2026 - Kit C/ 100 Envelopes (700 Cromos)", preco: 645, imagem: "⚽", link: "https://meli.la/24XyMjT", descricao: "Copa Do Mundo 2026 - Álbum Capa Normal - Fifa World Cup" },
+        { id: 35, nome: "Álbum Figurinhas Oficial Copa Do Mundo 2026 + 35 Figurinhas", preco: 74.90, imagem: "⚽", link: "https://meli.la/1yCt2VU", descricao: "Copa Do Mundo 2026 - Álbum Capa Normal - Fifa World Cup" }
+    ],
+
+    eletronicos: [
+        { id: 36, nome: "Smart Tv 43 Aoc Led Roku Full Hd Wi-fi 60hz Hdmi Usb 43s5155/78g", preco: 1281.90, imagem: "📺", link: "https://meli.la/29aEFRx", descricao: "4K 120Hz" },
+        { id: 37, nome: "Caixa de Som JBL Boombox 3, Bluetooth, Portátil, Cor Squad Verde", preco: 2139, imagem: "🔊", link: "https://meli.la/2LCp5jR", descricao: " JBL Boombox 3" },
+        { id: 38, nome: "Hisense Smart TV 4K 75 polegas", preco: 3959, imagem: "📽️", link: "https://meli.la/321jSxE", descricao: "Hisense Smart TV 4K 75" }
+    ],
+    
+    games: [
+        { id: 39, nome: "Base De Carregamento Controle Dualsense Ps5 Sony CFI-ZDS1", preco: 467, imagem: "🎮", link: "https://meli.la/1czqNKa", descricao: "Base De Carregamento Controle Dualsense Ps5" },
+        { id: 40, nome: "Controle joystick sem fio Sony PlayStation PS5 gray camuflado", preco: 431, imagem: "🎮", link: "https://meli.la/1WxWZKL", descricao: "Controle joystick sem fio Sony PlayStation PS5 gray camuflado" },
+        { id: 41, nome: "Cadeira Gamer Wells Preta Healer", preco: 440, imagem: "🎮", link: "https://meli.la/1fB4ym8", descricao: "Cadeira Gamer Wells Preta Healer" },
+        { id: 42, nome: "Console Playstation 5 Slim Edição Digital 825 Gb", preco: 3989, imagem: "🎮", link: "https://meli.la/1ti3Qgw", descricao: "Console Playstation 5 Slim Edição Digital 825 Gb" },
+        { id: 43, nome: "PlayStation 5 Slim Cor Branco 1 TB Versão Mídia Física", preco: 4559, imagem: "🎮", link: "https://meli.la/1WiKvfM", descricao: "PlayStation 5 Slim Cor Branco 1 TB Versão Mídia Física" },
+    ],
+
+    bebes: [
+        { id: 44, nome: "Berço 3 em 1 Vira Cama com Colchão Incluso Elza Multimóveis Branco", preco: 539, imagem: "🍼", link: "https://meli.la/23th1TW", descricao: "3 em 1" },
+        { id: 45, nome: "Carrinho Bebê Com Alça Reversível Youturn Preto Maxi Baby", preco: 489, imagem: "👶", link: "https://meli.la/1gFLKma", descricao: "Carrinho Bebê Com Alça Reversível " }
+    ]
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    setupCategorias();
+    mostrarCategoria('recomendacoes');
+    setupBusca();
+});
+
+function setupCategorias() {
+    const categorias = [
+        'recomendacoes', 'calçados', 'casa', 'veiculos', 'esportes', 'eletro',
+        'celulares', 'informatica', 'ferramentas', 'saude', 'brinquedos',
+        'eletronicos', 'cameras', 'games', 'bebes'
+    ];
+
+    categorias.forEach(cat => {
+        if (produtosPorCategoria[cat]) {
+            renderizarProdutosCategoria(cat);
+        }
+    });
+}
+
+function renderizarProdutosCategoria(cat) {
+    const grid = document.querySelector(`[data-categoria="${cat}"]`);
+    if (!grid) return;
+    const produtos = produtosPorCategoria[cat] || [];
+    grid.innerHTML = produtos.map(p => criarCardProduto(p)).join('');
+}
+
+function mostrarCategoria(cat) {
+    const section = document.querySelector(`[data-categoria="${cat}"]`);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function setupBusca() {
+    const input = document.getElementById('searchInput');
+    if (!input) return;
+    input.addEventListener('input', function(e) {
+        filtrarProdutos(e.target.value.toLowerCase());
+    });
+}
+
+function filtrarProdutos(termo) {
+    const todosProdutos = Object.values(produtosPorCategoria).flat();
+    const filtrados = todosProdutos.filter(p =>
+        p.nome.toLowerCase().includes(termo) ||
+        p.descricao.toLowerCase().includes(termo)
+    );
+
+    const grid = document.querySelector('[data-categoria="recomendacoes"]');
+    if (!grid) return;
+    grid.innerHTML = filtrados.slice(0, 12).map(p => criarCardProduto(p)).join('');
+}
+
+function criarCardProduto(produto) {
+    return `
+        <div class="produto-card">
+            <div class="produto-image">${produto.imagem}</div>
+            <div class="produto-info">
+                <h3>${produto.nome}</h3>
+                <p style="color: #666; font-size: 0.9rem;">${produto.descricao}</p>
+                <div class="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')}</div>
+                <a href="${produto.link}" target="_blank" class="btn-comprar">
+                    <i class="fas fa-external-link-alt"></i> Comprar Agora
+                </a>
+            </div>
+        </div>
+    `;
+}
+
+function setupEventListeners() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+}
+    </script>
+</body>
+</html>
